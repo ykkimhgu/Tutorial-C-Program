@@ -12,11 +12,11 @@ void main(){
 		
 	// Replace  'a' by 'A' and 'd' by 'D' 
 	ptr = a;
-	*ptr =_________________
-
-	// add code here
-	// add code here
-
+	*ptr =_________________// YOUR CODE GOES HERE
+			
+	// YOUR CODE GOES HERE
+	// YOUR CODE GOES HERE
+	
 
 	// Should Print as 'AbcDefghij'
 	for (int i = 0; i < 10; i++) {
