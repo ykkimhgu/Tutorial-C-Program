@@ -9,7 +9,7 @@ Language/ver     : C in MSVS2019
 Description      : myNM.c
 /----------------------------------------------------------------*/
 
-#include "myNM.h"
+#include "myNM_tutorial.h"
 
 double factorial(double _x)
 {
