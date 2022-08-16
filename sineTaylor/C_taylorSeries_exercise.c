@@ -63,3 +63,11 @@ double sinTaylor(double _x)
 
 	return S_N;
 }
+
+/*
+// Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
+double sindTaylor(double _x)
+{
+	// [TODO] add your algorithm here
+}
+*/
