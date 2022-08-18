@@ -82,7 +82,6 @@ Paste the following code or[ download src file from here](https://github.com/ykk
 // Include path will be included at the end of tutorial
 // #include "myNP_tutorial.h"
 
-
 void printVec(double* vec, int row);
 void addVec(double A[], double B[], double C[], int size);
 
@@ -198,80 +197,43 @@ void addVec(double A[], double B[], double C[], int size);
 
 In the above main() program, include your header library by finding the path.
 
-Now, you need to delete the function definition of `printArray()` in main(), for we have included the function from the header library file.
+Now, you need to delete the function definition of `printVec() & addVec()` in main(), for we have included the function from the header library file.
 
 The main source file should be modified as
 
-\#include "stdio.h"
-
-\#include "stdlib.h"
-
-
-
-// Change the Include path 
-
-\#include "../../../include/myNP_tutorial.h"   // Find the location of header files
-
-
-
-
-
-// #include "myNP_tutorial.h"   // if the PATH is already Included in Project
-
-
-
-
-
+```c++
+#include "stdio.h"
+#include "stdlib.h"
+#include "../../../include/myNP_tutorial.h"
 
 
 int main(int argc, char* argv[])
-
 {
 
+	// PART 1
+	printf("\n**************************************************");
+	printf("\n|                     PART 1.                    |");
+	printf("\n**************************************************\n");
+
+	double x[3] = { 1, 2, 3 };
+	int x_size = sizeof(x)/sizeof(double);
+
+	printVec(x, x_size);
 
 
-​	// PART 1
+	// Part 2
+	printf("\n**************************************************");
+	printf("\n|                     PART 2.                    |");
+	printf("\n**************************************************\n");
 
-​	printf("\n**************************************************");
+	double A[5] = { 10, 20, 30, 40, 50 };
+	double B[5] = { 1, 2, 3, 4, 5 };
 
-​	printf("\n|                     PART 1.                    |");
+	double C[5] = {};
+	addVec(A, B, C, 5);
+	printVec(C, 5);
 
-​	printf("\n**************************************************\n");
-
-​	
-
-​	int m = 3;
-
-​	double x[3] = { 1, 2, 3};
-
-​	
-
-​	double  dxdt[21] = { 0 };
-
-​	
-
-​	// Estimate differentation from discrete dataset points
-
-​	gradient1D(t, x, dxdt, m);
-
-​	printVec(dxdt, m);
-
-
-
-​	// Estimate differentation from the user defined function 
-
-​	double dydx[21];
-
-​	gradientFunc(myFunc, t, dydx, m);
-
-​	printVec(dydx, m);
-
-
-
-
-
-​	system("pause");
-
-​	return 0;
-
+	system("pause");
+	return 0;
 }
+```
