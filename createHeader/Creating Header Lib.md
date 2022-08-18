@@ -1,0 +1,225 @@
+# Creating Header Lib
+
+
+
+## Introduction
+
+You will learn how to create and maintain my own library/header file
+
+For this tutorial, we will create ;
+
+- Declare all your functions in `myNP_tutorial.h`
+- Define all your functions in `myNP_tutorial.c`
+
+
+
+---------------------------
+
+
+
+## Step 1. Workspace Folder
+
+
+
+### Create local directory for programming
+
+We will create the main directory under
+
+**C:\Users\yourID\source\repos**
+
+> e.g. **C:\Users\ykkim\source\repos**
+
+You can search for 'repos' in window menu
+
+![img](https://user-images.githubusercontent.com/38373000/185348195-07f482ba-3aac-4fc8-8298-9928f06fc534.png)
+
+
+
+This is where your assignment projects should be located.
+
+For this tutorial, let us create the new workspace directory as
+
+- Name the directory as "**NP**"
+
+  > A name that clearly shows the course name
+
+Create more necessary sub directories
+
+
+
+#### Example:
+
+- **C:\Users\yourID\source\repos\NP**
+- **C:\Users\yourID\source\repos\NP\tutorial**
+- **C:\Users\yourID\source\repos\NP\include**
+
+
+
+--------------------------
+
+
+
+## Step 2. Create a tutorial C Project
+
+Under **\tutorial** Directory, create a new folder named as **TU_createheader**
+
+- **C:\Users\yourID\source\repos\NP\tutorial\TU_createheader**
+
+Create a new empty project in Visual Studio Community. Name the project as **TU_createheader**
+
+Create a new C/C++ source file for main()
+
+- Name the source file as `TU_createHeader_main.cpp`
+
+
+
+Paste the following code or[ download src file from here](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/createHeader/TU_createHeader_main.cpp)
+
+/*-------------------------------------------------------------------------------\
+
+코드 복붙 요망
+
+
+
+## Part 2. Create your Header files
+
+Under the directory of **\include,** create **'myNP_tutorial.cpp**' and '**myNP_tutorial.h**'.
+
+- **C:\Users\yourID\source\repos\NP\include**
+- [You can download source files here](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/createHeader)
+
+
+
+Do not make duplicate copies of these files in your local drive. Update these files as you do assignments.
+
+myNP_tutorial.h
+
+myNP_tutorial.cpp
+
+/*----------------------------------------------------------------\
+
+@ C-Tutorial by Young-Keun Kim - Handong Global University
+
+
+
+Author           : [YOUR NAME]
+
+Created          : 26-03-2018
+
+Modified         : 19-08-2022
+
+Language/ver     : C++ in MSVS2022
+
+
+
+Description      : myNP_tutorial.h
+
+----------------------------------------------------------------*/
+
+
+
+\#ifndef		_MY_NP_H		// use either (#pragma once) or  (#ifndef ...#endif)
+
+\#define		_MY_NP_H
+
+
+
+\#include <iostream>
+
+\#include <string>
+
+\#include <fstream>
+
+
+
+void printVec(double* _vec, int _row);
+
+void addVec(double A[], double B[], double C[], int size);
+
+
+
+\#endif
+
+
+
+## Part 3. Include your Header files
+
+In the above main() program, include your header library by finding the path.
+
+Now, you need to delete the function definition of `printArray()` in main(), for we have included the function from the header library file.
+
+The main source file should be modified as
+
+\#include "stdio.h"
+
+\#include "stdlib.h"
+
+
+
+// Change the Include path 
+
+\#include "../../../include/myNP_tutorial.h"   // Find the location of header files
+
+
+
+
+
+// #include "myNP_tutorial.h"   // if the PATH is already Included in Project
+
+
+
+
+
+
+
+int main(int argc, char* argv[])
+
+{
+
+
+
+​	// PART 1
+
+​	printf("\n**************************************************");
+
+​	printf("\n|                     PART 1.                    |");
+
+​	printf("\n**************************************************\n");
+
+​	
+
+​	int m = 3;
+
+​	double x[3] = { 1, 2, 3};
+
+​	
+
+​	double  dxdt[21] = { 0 };
+
+​	
+
+​	// Estimate differentation from discrete dataset points
+
+​	gradient1D(t, x, dxdt, m);
+
+​	printVec(dxdt, m);
+
+
+
+​	// Estimate differentation from the user defined function 
+
+​	double dydx[21];
+
+​	gradientFunc(myFunc, t, dydx, m);
+
+​	printVec(dydx, m);
+
+
+
+
+
+​	system("pause");
+
+​	return 0;
+
+}

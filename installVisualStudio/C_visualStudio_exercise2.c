@@ -1,5 +1,5 @@
 /*-------------------------------------------------------------------------------\
-@ C Programming Tutorial by Young-Keun Kim - Handong Global University
+@ C-Tutorial by Young-Keun Kim - Handong Global University
 Author           : SSS LAB
 Created          : 19-08-2022
 Modified         : 19-08-2022
