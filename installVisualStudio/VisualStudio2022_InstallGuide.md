@@ -75,7 +75,9 @@ Microsoft 계정을 통해, 무료로 다운로드 할 수 있습니다.
 아래 소스코드를 입력한 후, 실행합니다 <br>
 (디버그 -> 디버그하지 않고 시작) 또는 (CTRL + F5)
 
-'''
+
+
+```c
 #include <stdio.h>
 
 int main()
@@ -83,8 +85,11 @@ int main()
     printf("Hello, Handong!\n");
 
     return 0;
+
 }
-'''
+```
+
+
 
 <br><br>
 
@@ -106,7 +111,7 @@ int main()
 
 <br><br>
 
-'''
+```c
 #include <stdio.h>
 
 int main() {
@@ -118,10 +123,13 @@ int main() {
 	sum = a + b;
 	printf("%d + %d = %d\n", a, b, sum);
 	printf("Thank you!");
-
+	
 	return 0;
+
 }
-'''
+```
+
+
 
 <br><br>
 
@@ -158,6 +166,8 @@ _CRT_SECURE_NO_WARNINGS; 를 추가합니다.
 
 위와 같이 **속성->빌드에서 제외** 항목을 바꿔주는 것도 하나의 방법입니다.
 
+<br><br>
+
 
 ## Visual Studio 활용하기: 디버깅
 
@@ -166,6 +176,8 @@ _CRT_SECURE_NO_WARNINGS; 를 추가합니다.
 ### 한 줄씩 디버깅하기
 
 ![image](https://user-images.githubusercontent.com/84503980/185399262-71a4c79e-737f-42f6-b8dd-e2df606bbcb2.png)
+
+<br><br>
 
 위와 같이, 단축키 **F11** 을 누르면 위에서부터 한 줄씩 코드를 실행시킵니다.
 **F11**을 누를 때 마다 좌측 화살표가 한 줄씩 내려가며 코드가 실행됩니다.
