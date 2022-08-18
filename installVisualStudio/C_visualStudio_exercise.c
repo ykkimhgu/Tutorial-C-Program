@@ -10,7 +10,7 @@ Description      : C_visualStudio_exercise.c
 
 #include <stdio.h>
 
-int main2()
+int main()
 {
     printf("Hello, Handong!\n");
 
