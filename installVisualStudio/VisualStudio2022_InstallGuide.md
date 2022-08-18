@@ -39,7 +39,7 @@ Microsoft 계정을 통해, 무료로 다운로드 할 수 있습니다.
 
 <br><br>
 
-## Visual Studio 활용하기
+## Visual Studio 사용하기
 
 ![image](https://user-images.githubusercontent.com/84503980/185390762-7065b68c-fab3-468b-b244-d773bdeaf696.png)
 
@@ -72,7 +72,8 @@ Microsoft 계정을 통해, 무료로 다운로드 할 수 있습니다.
 
 <br><br>
 
-아래 소스코드를 입력한 후, 실행합니다 (CTRL + F5)
+아래 소스코드를 입력한 후, 실행합니다 <br>
+(디버그 -> 디버그하지 않고 시작) 또는 (CTRL + F5)
 
 '''
 #include <stdio.h>
@@ -85,3 +86,103 @@ int main()
 }
 '''
 
+<br><br>
+
+**기존 항목**을 클릭하여, 외부의 소스 파일을 프로젝트에 추가하여 실행시키는 것도 가능합니다.
+- [**Source Code**](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/installVisualStudio)
+
+
+![image](https://user-images.githubusercontent.com/84503980/185394697-c321c21d-0bf2-4fee-a4dd-ff7678d7fbfe.png)
+
+정상적으로 따라왔다면, 위와 같은 결과가 출력됨을 확인할 수 있습니다.
+
+
+## Visual Studio 사용하기 2
+
+위에서, 단순 문장을 출력하는 코드를 작성했습니다.
+다음으로, 두 숫자를 입력받아 합을 출력하는 코드를 작성해 봅시다.
+
+위에서 생성한 프로젝트 안에, **C_visualStudio_exercise2.c** 코드를 생성하고, 실행합니다.
+
+<br><br>
+
+'''
+#include <stdio.h>
+
+int main() {
+	int a=0, b=0;
+	int sum=0;
+
+	printf("Enter two numbers: ");
+	scanf("%d %d", &a, &b);
+	sum = a + b;
+	printf("%d + %d = %d\n", a, b, sum);
+	printf("Thank you!");
+
+	return 0;
+}
+'''
+
+<br><br>
+
+![image](https://user-images.githubusercontent.com/84503980/185396376-4474bf9d-3614-4549-9ef4-495fb1b70193.png)
+
+그런데, build를 하면 **scanf** 에서 오류가 나는 것을 확인할 수 있습니다.
+노란색 경고의 경우 단순히 버려지는 값이 있음을 알리기 위해 인텔리센스가 안내하는 내용입니다.
+원하는 작업대로 정상 동작 한다면 무시해도 됩니다.
+
+**scanf** 오류 해결을 위해, 해당 프로젝트에 우클릭, **속성** 버튼을 클릭합니다.
+
+![image](https://user-images.githubusercontent.com/84503980/185396912-3846f393-e587-4338-a929-3acc9ea40d53.png)
+
+속성의 **C/C++ -> 전처리기** 에 들어가서, **전처리기 정의** 부분에 <br>
+_CRT_SECURE_NO_WARNINGS; 를 추가합니다.
+
+이후 적용 -> 확인을 통해 창을 닫습니다.
+
+<br><br>
+
+![image](https://user-images.githubusercontent.com/84503980/185397537-142644d8-45c3-4577-9f3b-ea2caf11b9cd.png)
+
+이후 다시 빌드를 하면, **scanf** 오류가 해결되었음을 확인할 수 있습니다.
+그런데, 또 다른 **main**이 정의되었다는 에러가 발생했습니다.
+
+같은 프로젝트 내에서 **C_visualStudio_exercise.c**, **C_visualStudio_exercise2.c** 두 개의 소스파일을 빌드하는 과정에서 main이 중복되기 때문입니다.
+
+<br><br>
+![image](https://user-images.githubusercontent.com/84503980/185398246-cfa1ab71-b2f1-442f-a636-82a77ab489e7.png)
+
+위와 같이 기존 main 함수의 이름을 임의로 바꾸어 주거나, 기존 소스 파일을 프로젝트에서 제거할 경우 오류 없이 정상적으로 **C_visualStudio_exercise2.c**가 빌드됩니다.
+
+![image](https://user-images.githubusercontent.com/84503980/185398682-dbffe166-e721-48ab-bc5a-7e264d9b323d.png)
+
+위와 같이 **속성->빌드에서 제외** 항목을 바꿔주는 것도 하나의 방법입니다.
+
+
+## Visual Studio 활용하기: 디버깅
+
+디버깅은 코드의 에러를 찾는 데 매우 효과적인 방법입니다.
+
+### 한 줄씩 디버깅하기
+
+![image](https://user-images.githubusercontent.com/84503980/185399262-71a4c79e-737f-42f6-b8dd-e2df606bbcb2.png)
+
+위와 같이, 단축키 **F11** 을 누르면 위에서부터 한 줄씩 코드를 실행시킵니다.
+**F11**을 누를 때 마다 좌측 화살표가 한 줄씩 내려가며 코드가 실행됩니다.
+이를 통해 프로그램의 진행 상황을 파악할 수 있고, 에러가 발생한 경우 어느 위치에서 에러가 발생하는지를 알 수 있습니다.
+
+<br><br>
+
+### 중단점(Break Point) 활용하여 디버깅하기
+
+단축키 **F9** 단축키를 통해 중단점을 설정할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/84503980/185399797-0f4a8a89-b628-4c59-bc1c-a340ac29a309.png)
+
+위 사진은 9번째 줄에 중단점을 설정한 상태입니다.
+이 상태에서 **F5**를 눌러 디버깅을 시작하면, 설정한 중단점부터 디버깅을 시작합니다.
+
+디버깅이 시작된 이후에는, **F11**을 통해 한 줄씩 코드를 실행시킬 수 있습니다.
+
+Visual Studio 디버깅에 관해 보다 상세한 설명이 필요하다면,
+[Link](https://dojang.io/mod/page/view.php?id=806) 를 참조하시기 바랍니다.
