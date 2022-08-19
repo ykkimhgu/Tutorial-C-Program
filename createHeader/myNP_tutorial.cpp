@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------\
-@ Numerical Methods by Young-Keun Kim - Handong Global University
+@ C-Tutorial by Young-Keun Kim - Handong Global University
 
-Author           : YOUR NAME
+Author           : SSS LAB
 Created          : 05-03-2021
 Modified         : 08-19-2022
 Language/ver     : C++ in MSVS2022

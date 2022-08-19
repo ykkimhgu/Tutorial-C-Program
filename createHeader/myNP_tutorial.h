@@ -1,12 +1,12 @@
 /*----------------------------------------------------------------\
-@ Numerical Methods by Young-Keun Kim - Handong Global University
+@ C-Tutorial by Young-Keun Kim - Handong Global University
 
-Author           : YOUR NAME
+Author           : SSS LAB
 Created          : 05-03-2021
 Modified         : 08-19-2022
-Language/ver     : C in MSVS2022
+Language/ver     : C++ in MSVS2022
 
-Description      : myNP.h
+Description      : myNP_tutorial.h
 /----------------------------------------------------------------*/
 
 #ifndef		_MY_NP_H		// use either (#pragma once) or  (#ifndef ...#endif)
