@@ -22,7 +22,7 @@
 
 ### Example 
 
-[C_array2D_example.](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/pointer-array/solution)[cpp](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/pointer-array)
+[C_array2D_example.](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/array)[cpp](https://github.com/ykkimhgu/Tutorial-C-Program/blob/main/array/C_array2d_example.cpp.)
 
 ```cpp
 #include <stdio.h>
@@ -153,14 +153,14 @@ void printMat3(double(_mat)[][3], int _row, int _col)
 ## Exercise
 
 - [Online C Compiler](https://www.onlinegdb.com/online_c_compiler)
-- [Exercise Code](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/pointer-array)
-- [Exercise-Solution Code](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/pointer-array/solution)
+- [Exercise Code](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/array)
+- [Exercise-Solution Code](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/array/solution)
 
 <br>
 
 ### Exercise 1
 
-[C_array2d_exercise.c](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/pointer-array)
+[C_array2d_exercise.c](https://github.com/ykkimhgu/Tutorial-C-Program/blob/main/array/C_array2d_exercise.c)
 
 Create functions for
 
