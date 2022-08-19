@@ -9,7 +9,8 @@ Language/ver     : C++ in MSVS2022
 Description      : myNP_tutorial.cpp
 /----------------------------------------------------------------*/
 
-#include "../include/myNP_tutorial.h"
+#include "myNP_tutorial.h"
+// #include "../include/myNP_tutorial.h"
 
 double factorial(double _x)
 {
