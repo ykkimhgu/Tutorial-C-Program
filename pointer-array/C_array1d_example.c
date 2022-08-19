@@ -1,30 +1,35 @@
+/*-------------------------------------------------------------------------------\
+@ C-Tutorial by Young-Keun Kim - Handong Global University
+Author           : SSS LAB
+Created          : 19-08-2022
+Modified         : 19-08-2022
+Language/ver     : C in MSVS2022
+Description      : C_array1d_example.c
+-------------------------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
-// Vector addition
-void addVec(double _vecA[], double _vecB[], double _vecOut[], int _dim);
+void printVec(double* _vec, int _row);
 
-int main() {
+int main()
+{
+	// Static Matrix Allocation  1-D array 
+	// fixed array size and initial constant values
+	double a[4] = { 1, 2, 3, 4 };
+	double b[] = { 2, 3, 4, 5 };
+	double c[4] = { 0 };
 
-	// 1D array declaration and definition
-	double vecA[] = { 1, 2, 3 };
-	double vecB[] = { 10, 20, 30 };
-	double vecC[3] = { 0 };
-
-	// Applying 'addVec' function
-	addVec(vecA, vecB, vecC, 3);
-
-	// Print result
-	for (int i = 0; i < 3; i++)
-		printf("%f\t", vecC[i]);
-	printf("\n");
+	// Print 1-D array element
+	printVec(a, 4);
 
 	system("pause");
 	return 0;
 }
 
-// Vector addition
-void addVec(double _vecA[], double _vecB[], double _vecOut[], int _dim) {
-	for (int i = 0; i < _dim; i++)
-		_vecOut[i] = _vecA[i] + *(_vecB + i);		// *(_vecB + i) == _vecB[i]
+void printVec(double* _vec, int _row)
+{
+	for (int i = 0; i < _row; i++)
+		printf("Vector[%d] = %f \n", i, _vec[i]);
+	printf("\n");
 }
