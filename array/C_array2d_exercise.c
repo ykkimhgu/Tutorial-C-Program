@@ -20,6 +20,9 @@ void addMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
 void multMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim);
 // Transposed matrix
 void transMat(double _matA[][3], double _matOut[][3], int _dim);
+// Subtract  matrix
+void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim);
+
 // Print matrix
 void printMat(double _matA[][3], int _dim);
 
@@ -84,4 +87,11 @@ void printMat(double _matA[][3], int _dim) {
 		printf("\n");
 	}
 	printf("\n");
+}
+
+
+// Subtract  matrix
+void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
+{
+	
 }
