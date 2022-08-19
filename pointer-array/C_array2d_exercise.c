@@ -61,6 +61,17 @@ void addMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
 
 }
 
+
+// Subtract  matrix
+void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
+{
+	// YOUR CODE GOES HERE		
+	// YOUR CODE GOES HERE		
+	// YOUR CODE GOES HERE		
+}
+
+
+
 // Matrix multiplication
 void multMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim) {
 	for (size_t i = 0; i < _dim; i++)
@@ -89,9 +100,3 @@ void printMat(double _matA[][3], int _dim) {
 	printf("\n");
 }
 
-
-// Subtract  matrix
-void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
-{
-	
-}

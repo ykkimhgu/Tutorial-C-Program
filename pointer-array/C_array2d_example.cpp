@@ -6,7 +6,7 @@ Created          : 01-02-2015
 Modified         : 24-02-2017
 Language/ver     : C++ in MSVS2013
 
-Description:	 : Static  1D/2D Array  Example for Tutorial 1
+Description:	 : Static  1D/2D Array  Example 
 ------------------------------------------------------------------------------------------*/
 
 
@@ -52,8 +52,6 @@ int main()
 
 	// Passing 2D to a function
 	printMat(A, _row, _col);	
-	printMat2(A, _row, _col);	
-	printMat3(A, _row, _col);
 
 
 	// Simple method to access 2-D arrays
@@ -66,6 +64,11 @@ int main()
 	}
 	printf("\n\n");
 
+
+////////////// Other options
+	// Passing 2D to a function
+	printMat2(A, _row, _col);	
+	printMat3(A, _row, _col);
 
 	// Different ways of using 2-D arrays, Note that  a[i]== *(a+i)
 	printf("(*(A+i))[k] \t *(A[i])+k \t *(*(A + i))+k \n");
@@ -84,6 +87,7 @@ int main()
 	system("pause");
 
 }
+
 
 void printVec(double *_vec, int _row)
 {
@@ -104,6 +108,8 @@ void printMat(double(_mat)[3][3], int _row, int _col)
 	printf("\n");
 }
 
+
+// Other options
 void printMat2(double(*_mat)[3], int _row, int _col)
 {
 	int i, j;
