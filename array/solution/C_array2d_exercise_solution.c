@@ -20,6 +20,10 @@ void multMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim
 // Transposed matrix
 void transMat(double _matA[][3], double _matOut[][3], int _dim);
 
+// Subtract  matrix
+void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim);
+
+
 // Print matrix
 void printMat(double _matA[][3], int _dim);
 
@@ -57,6 +61,15 @@ void addMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim)
 			_matOut[i][j] = _matA[i][j] + *(*(_matB + i) + j);	// *(*(_matB + i) + j) == _matB[i][j]
 
 }
+
+// Matrix subtraction
+void subtractMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim) {
+	for (size_t i = 0; i < _dim; i++)
+		for (size_t j = 0; j < _dim; j++)
+			_matOut[i][j] = _matA[i][j] - *(*(_matB + i) + j);	// *(*(_matB + i) + j) == _matB[i][j]
+
+}
+
 
 // Matrix multiplication
 void multMat(double _matA[][3], double _matB[][3], double _matOut[][3], int _dim) {
