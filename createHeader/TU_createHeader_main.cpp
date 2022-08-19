@@ -15,7 +15,6 @@ Description      : TU_createHeader_main.cpp
 
 
 void printVec(double* vec, int row);
-void addVec(double A[], double B[], double C[], int size);
 
 int main(int argc, char* argv[])
 {

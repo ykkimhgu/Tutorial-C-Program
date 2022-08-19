@@ -20,6 +20,5 @@ Description      : myNP_tutorial.h
 extern double factorial(double _x);
 
 extern void printVec(double* vec, int row);
-extern void addVec(double A[], double B[], double C[], int size);
 
 #endif

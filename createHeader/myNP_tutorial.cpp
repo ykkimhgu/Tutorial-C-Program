@@ -26,10 +26,3 @@ void printVec(double* vec, int size)
 		printf("Vector[%d] = %.1f \n", i, vec[i]);
 	printf("\n");
 }
-
-
-void addVec(double A[], double B[], double C[], int size)
-{
-	for (int i = 0; i < size; i++)
-		C[i] = A[i] + B[i];
-}
