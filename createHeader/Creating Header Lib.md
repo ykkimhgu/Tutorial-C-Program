@@ -83,7 +83,6 @@ Paste the following code or[ download src file from here](https://github.com/ykk
 // #include "myNP_tutorial.h"
 
 void printVec(double* vec, int row);
-void addVec(double A[], double B[], double C[], int size);
 
 int main(int argc, char* argv[])
 {
@@ -121,12 +120,6 @@ void printVec(double* vec, int size)
 	for (int i = 0; i < size; i++)
 		printf("Vector[%d] = %.1f \n", i, vec[i]);
 	printf("\n");
-}
-
-void addVec(double A[], double B[], double C[], int size)
-{
-	for (int i = 0; i < size; i++)
-		C[i] = A[i] + B[i];
 }
 ```
 
@@ -201,7 +194,7 @@ Now, you need to delete the function definition of `printVec() & addVec()` in ma
 
 The main source file should be modified as
 
-```c++
+```
 #include "stdio.h"
 #include "stdlib.h"
 #include "../../../include/myNP_tutorial.h"
@@ -220,20 +213,5 @@ int main(int argc, char* argv[])
 
 	printVec(x, x_size);
 
-
-	// Part 2
-	printf("\n**************************************************");
-	printf("\n|                     PART 2.                    |");
-	printf("\n**************************************************\n");
-
-	double A[5] = { 10, 20, 30, 40, 50 };
-	double B[5] = { 1, 2, 3, 4, 5 };
-
-	double C[5] = {};
-	addVec(A, B, C, 5);
-	printVec(C, 5);
-
-	system("pause");
-	return 0;
 }
 ```
