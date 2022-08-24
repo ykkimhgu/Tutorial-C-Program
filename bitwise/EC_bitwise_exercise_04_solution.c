@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void dec2bin(unsigned int n);
+	
 void main() {
 
 	unsigned int a = 118;
