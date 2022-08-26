@@ -21,13 +21,15 @@ Matrix	createMat(int _rows, int _cols)
 	}
 
 	Matrix Out;
+
 	// 1. Allocate row array first
 	Out.at = (double**)malloc(sizeof(double*) * _rows);
+	
 	// 2. Then, allocate column 
 	for (int i = 0; i < _rows; i++)
 		Out.at[i] = (double*)malloc(sizeof(double) * _cols);
+	
 	// 3. Initialize row & column values of a matrix
-
 	Out.rows = _rows;
 	Out.cols = _cols;
 
