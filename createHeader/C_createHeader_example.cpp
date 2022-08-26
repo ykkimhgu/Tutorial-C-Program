@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 
 }
 
-
+// Delete the following function definition if you include #include "myNP_tutorial.h"
 void printVec(double* vec, int size)
 {
 	for (int i = 0; i < size; i++)

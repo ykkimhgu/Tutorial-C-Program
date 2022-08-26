@@ -1,4 +1,6 @@
-x`#include <stdio.h>
+#include <stdio.h>
+
+void dec2bin(unsigned int n);
 
 void main() {
 
