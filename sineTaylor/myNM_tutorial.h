@@ -17,6 +17,18 @@ Description      : myNM.h
 #include <stdlib.h>
 #include <math.h>
 
+// Factorial function
 extern double factorial(double _x);
+
+/*
+// Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
+extern double sinTaylor(double _x);
+
+// Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
+extern double sindTaylor(double _x);
+
+// Taylor series approximation for sin(x) without using pre-defined functions (input unit: [rad])
+extern double sinTaylor2(double _x);
+*/
 
 #endif
