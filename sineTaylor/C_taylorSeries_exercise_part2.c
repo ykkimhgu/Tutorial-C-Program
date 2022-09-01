@@ -1,40 +1,42 @@
 /*----------------------------------------------------------------\
-@ Numerical Methods by Young-Keun Kim - Handong Global University
+@ C-Tutorial by Young-Keun Kim - Handong Global University
+
 Author           : YOUR NAME
-Created          : 05-03-2021
-Modified         : 05-03-2021
-Language/ver     : C in MSVS2019
-Description      : myNM_main.c
+Created          : 09-01-2022
+Modified         : 09-01-2022
+Language/ver     : C in MSVS2022
+
+Description      : C_taylorSeries_part2.c
 ----------------------------------------------------------------*/
 
-#include "myNM_tutorial.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define		PI		3.14159265358979323846264338327950288419716939937510582
+
+#include "../../../include/myNP_tutorial.h"
 
 int main(int argc, char* argv[])
 {
 
 	double x = PI / 3;
-	
-	int N_max = 20;
-	double epsilon = 1e-5;
+	//double x = 60;
 
-	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-	int N = 0;
+	double S_N = 0;
 
 	/*===== Select the function to call =====*/
 	S_N = sinTaylor(x);
-	
-	
+	//S_N = sindTaylor(x);
+
 	printf("\n\n");
 	printf("=======================================\n");
 	printf("    sin( %f[rad] ) Calculation   \n", x);
-	printf("=======================================\n");	
+	printf("=======================================\n");
 	printf("   -  My     result = %3.12f    \n", S_N);
 	printf("   -  Math.h result = %3.12f    \n", sin(x));
 	printf("   -  absolute err. = %3.12f    \n", S_N - sin(x));
 	printf("=======================================\n");
-	
+
 	system("pause");
 	return 0;
 }
-
-

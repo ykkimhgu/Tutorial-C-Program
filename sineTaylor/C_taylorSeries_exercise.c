@@ -1,12 +1,12 @@
 /*----------------------------------------------------------------\
-@ Numerical Methods by Young-Keun Kim - Handong Global University
+@ C-Tutorial by Young-Keun Kim - Handong Global University
 
 Author           : YOUR NAME
-Created          : 05-03-2021
-Modified         : 05-03-2021
-Language/ver     : C in MSVS2019
+Created          : 09-01-2022
+Modified         : 09-01-2022
+Language/ver     : C in MSVS2022
 
-Description      : myNM_main.c
+Description      : C_taylorSeries_exercise.c
 ----------------------------------------------------------------*/
 
 #include <stdio.h>
@@ -14,24 +14,25 @@ Description      : myNM_main.c
 #include <math.h>
 #define		PI		3.14159265358979323846264338327950288419716939937510582
 
-double sinTaylor(double _x);
-double factorial(double _x);
 
+double factorial(int _x);
+double sinTaylor(double _x);
+double sindTaylor(double _x);
+
+double power(double _x, int N);
+double sinTaylor2(double _x);
 
 int main(int argc, char* argv[])
 {
 
 	double x = PI / 3;
-	
-	int N_max = 20;
-	double epsilon = 1e-5;
+	//double x = 60;
 
-	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-	int N = 0;
+	double S_N = 0;
 
 	/*===== Select the function to call =====*/
 	S_N = sinTaylor(x);
-	
+	//S_N = sindTaylor(x);
 	
 	printf("\n\n");
 	printf("=======================================\n");
@@ -47,37 +48,44 @@ int main(int argc, char* argv[])
 }
 
 
+// factorial function
+double factorial(int N)
+{
+	int y = 1;
+	for (int k = 2; k <= N; k++)
+		y = y * k;
+
+	return y;
+}
+
+
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 double sinTaylor(double _x)
-{
-	// Use  pow(x,n)  defined in <math.h>
-	// Use  factorial(x)  defined in this source file 
-		
-	int N_max = 20;
+{	
+	int N_max = 10;
 	double S_N = 0;			
 
-	for (int k = 0; k < N_max; k++)		
+	for (int k = 0; k < N_max; k++)
 		// [TODO] add your algorithm here
 	
 	return S_N;
 }
 
 
-// factorial function
-double factorial(double N)
-{
-	int y=1;
-   	for (int k=1; k<=N; k++)
-   		y=y*k;		
-	return y
-}
-
-	
-	
-/*
 // Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
 double sindTaylor(double _x)
 {
 	// [TODO] add your algorithm here
 }
-*/
+
+// power fuction
+double power(double _x, int N)
+{
+	// [TODO] add your algorithm here
+}
+
+//  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
+double sinTaylor2(double _x)
+{
+	// [TODO] add your algorithm here
+}
