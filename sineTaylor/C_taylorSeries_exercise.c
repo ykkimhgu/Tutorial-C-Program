@@ -12,10 +12,11 @@ Description      : myNM_main.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 #define		PI		3.14159265358979323846264338327950288419716939937510582
 
 double sinTaylor(double _x);
+double factorial(double _x);
+
 
 int main(int argc, char* argv[])
 {
@@ -49,28 +50,33 @@ int main(int argc, char* argv[])
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 double sinTaylor(double _x)
 {
+	// Use  pow(x,n)  defined in <math.h>
+	// Use  factorial(x)  defined in this source file 
+		
 	int N_max = 20;
-	double epsilon = 1e-5;
+	double S_N = 0;			
 
-	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-	int N = 0;
-
-	do {
-		N++;
-		S_N_prev = S_N;
-		S_N = 0;
+	for (int k = 0; k < N_max; k++)		
 		// [TODO] add your algorithm here
-		// [TODO] add your algorithm here
-		// [TODO] add your algorithm here
-
-	} while (N < N_max && rel_chg >= epsilon);
-
+	
 	return S_N;
 }
 
+
+// factorial function
+double factorial(double _x)
+{
+	if (_x <= 1)
+		return 1;
+	else
+		return _x * factorial(_x - 1);
+}
+
+	
+	
 /*
 // Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
-double sinTaylor(double _x)
+double sindTaylor(double _x)
 {
 	// [TODO] add your algorithm here
 }
