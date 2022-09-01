@@ -64,12 +64,12 @@ double sinTaylor(double _x)
 
 
 // factorial function
-double factorial(double _x)
+double factorial(double N)
 {
-	if (_x <= 1)
-		return 1;
-	else
-		return _x * factorial(_x - 1);
+	int y=1;
+   	for (int k=1; k<=N; k++)
+   		y=y*k;		
+	return y
 }
 
 	
