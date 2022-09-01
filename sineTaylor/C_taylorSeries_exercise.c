@@ -9,7 +9,13 @@ Language/ver     : C in MSVS2019
 Description      : myNM_main.c
 ----------------------------------------------------------------*/
 
-#include "myNM_tutorial.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define		PI		3.14159265358979323846264338327950288419716939937510582
+
+double sinTaylor(double _x);
 
 int main(int argc, char* argv[])
 {
@@ -29,8 +35,7 @@ int main(int argc, char* argv[])
 	printf("\n\n");
 	printf("=======================================\n");
 	printf("    sin( %f[rad] ) Calculation   \n", x);
-	printf("=======================================\n");
-	printf("   -  iteration No. = %d        \n", N);
+	printf("=======================================\n");	
 	printf("   -  My     result = %3.12f    \n", S_N);
 	printf("   -  Math.h result = %3.12f    \n", sin(x));
 	printf("   -  absolute err. = %3.12f    \n", S_N - sin(x));
@@ -39,7 +44,6 @@ int main(int argc, char* argv[])
 	system("pause");
 	return 0;
 }
-
 
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
@@ -66,7 +70,7 @@ double sinTaylor(double _x)
 
 /*
 // Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
-double sindTaylor(double _x)
+double sinTaylor(double _x)
 {
 	// [TODO] add your algorithm here
 }
