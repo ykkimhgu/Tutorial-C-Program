@@ -12,11 +12,11 @@
 
    [Download source codes](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/sineTaylor) :  
 
-   `C_taylorSeries_exercise.c, myNM_tutorial.h,  myNM _tutorial.c`
+   `C_taylorSeries_exercise.c, myNP_tutorial.h,  myNP_tutorial.c`
 
 3. 3.
 
-   Include `myNM_tutorial.h` & `myNM _tutorial.c` in your main source
+   Include `myNP_tutorial.h` & `myNP_tutorial.c` in your main source
 
 
 
@@ -57,19 +57,19 @@ Author           : SSS LAB
 
 Created          : 05-03-2021
 
-Modified         : 08-30-2021
+Modified         : 09-02-2022
 
-Language/ver     : C in MSVS2019
+Language/ver     : C in MSVS2022
 
 
 
-Description      : myNM_main.c
+Description      : C_taylorSeries_exercise.c
 
 ----------------------------------------------------------------*/
 
 
 
-\#include "myNM.h"
+#include "../../../include/myNP_tutorial.h"
 
 
 
@@ -127,9 +127,9 @@ int main(void)
 
 ## Solution
 
-myNM.h
+myNP_tutorial.h
 
-myNM.c
+myNP_tutorial.c
 
 /*----------------------------------------------------------------\
 
@@ -141,19 +141,19 @@ Author           : SSS Lab
 
 Created          : 05-03-2021
 
-Modified         : 05-03-2021
+Modified         : 09-02-2022
 
-Language/ver     : C in MSVS2019
+Language/ver     : C in MSVS2022
 
 
 
-Description      : myNM.c
+Description      : myNP_tutorial.c
 
 /----------------------------------------------------------------*/
 
 
 
-\#include "myNM.h"
+\#include "myNP_tutorial.h"
 
 
 
