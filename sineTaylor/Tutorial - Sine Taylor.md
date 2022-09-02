@@ -36,10 +36,9 @@
 
 ### TIP
 
-![img](https://424033796-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MgmrEstOHxu62gXxq1t%2Fuploads%2Fgit-blob-f02657864e0236cd867f18143bce694fa3d5f8d1%2Fimage.png?alt=media)
+![image](https://user-images.githubusercontent.com/84503980/188071951-00d2bb3d-735c-40c2-a0ba-85a5cc88bf9d.png)
 
-![img](https://424033796-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MgmrEstOHxu62gXxq1t%2Fuploads%2Fgit-blob-fc9f39f7c57142f3f885b35e5eecd3c116e9b692%2Fimage.png?alt=media)
-
+![image](https://user-images.githubusercontent.com/84503980/188072025-424bab29-036a-4b09-81d3-61f1c61916e5.png)
 
 
 <br>
@@ -164,13 +163,13 @@ double factorial(double _x)
 
 {
 
-​	if (_x <= 1)
+​	int y = 1;
 
-​		return 1;
+​	for (int k = 2; k <= N; k++)
 
-​	else
+​	   y = y * k;
 
-​		return _x * factorial(_x - 1);
+​	return y;
 
 }
 
@@ -178,43 +177,16 @@ double factorial(double _x)
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 
-double sinTaylor(double _x) 
+double sinTaylor(double _x)
 
 {
+​	int N_max = 10;
 
-​	int N_max = 20;
+​	double S_N = 0;
 
-​	double epsilon = 1e-5;
+​	for (int k = 0; k < N_max; k++)
 
-
-
-​	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-
-​	int N = 0;
-
-
-
-​	do {
-
-​		N++;
-
-​		S_N_prev = S_N;
-
-​		S_N = 0;
-
-​		for (int k = 0; k < N; k++)
-
-​			S_N += pow(-1, k) * pow(_x, 2 * k + 1) / factorial(2 * k + 1);
-
-
-
-​		rel_chg = fabs((S_N - S_N_prev) / S_N_prev);
-
-
-
-​	} while (N < N_max && rel_chg >= epsilon);
-
-
+​		S_N = S_N + pow(-1, k) * pow(_x, 2 * k + 1) / factorial(2 * k + 1);
 
 ​	return S_N;
 
@@ -233,155 +205,35 @@ double sindTaylor(double _x)
 }
 
 
-
-// Taylor series approximation for sin(x) without using pre-defined functions (input unit: [rad])
-
-double sinTaylor2(double _x) 
+// power fuction
+double power(double _x, int N)
 
 {
 
-​	int N_max = 20;
+​	double y = 1;
 
-​	double epsilon = 1e-5;
+​	for (int k = 1; k <= N; k++)
 
+​			y = y * _x;
 
-
-​	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-
-​	int N = 0;
-
-
-
-​	do {
-
-​		N++;
-
-​		S_N_prev = S_N;
-
-​		S_N = 0;
-
-
-
-​		for (int k = 0; k < N; k++)
-
-​		{
-
-​			//  (-1)^n			
-
-​			int sign_part = 1;
-
-​			for (int i = 1; i <= k; i++)   //sign_part *= -1;
-
-​				sign_part *= -1;
-
-
-
-​			//  (x)^n			
-
-​			double pow_part = 1;
-
-​			for (int i = 1; i <= 2 * k + 1; i++)  //pow_part *= _x * _x;
-
-​				pow_part *= _x;
-
-
-
-​			// Factorial
-
-​			double fac_part = 1;
-
-​			for (int i = 1; i <= 2 * k + 1; i++)
-
-​				fac_part *= i;
-
-
-
-​			S_N += sign_part * pow_part / fac_part;
-
-​		}
-
-
-
-​		rel_chg = fabs((S_N - S_N_prev) / S_N_prev);
-
-
-
-​	} while (N < N_max && rel_chg >= epsilon);
-
-
-
-​	return S_N;
+​	return y;
 
 }
 
 
-
-// Function that reduced the computation cost of sinTaylor2 (input unit: [rad])
-
-double sinTaylor3(double _x) 
+// Taylor series approximation for sin(x) without using pre-defined functions (input unit: [rad])
+double sinTaylor2(double _x)
 
 {
 
-​	int N_max = 20;
+​	int N_max = 10;
 
-​	double epsilon = 1e-5;
+​	double S_N = 0;
 
+​	for (int k = 0; k < N_max; k++)
 
-
-​	double S_N = 0, S_N_prev = 0, rel_chg = 0;
-
-​	int N = 0;
-
-​		   
-
-​	int sign_part = -1;
-
-​	
-
-​	if (_x==0)
-
-​		return 0;
-
-​	else
-
-​	{	
-
-​		double pow_part = 0;
-
-​		if (_x=!0)		pow_part = 1 / _x;
-
-
-
-​		double fac_part = 1;
-
-​		
-
-​		do {
-
-​			N++;
-
-​			S_N_prev = S_N;
-
-
-
-​			sign_part *= -1;
-
-​			pow_part *= _x * _x;
-
-​			fac_part = max(fac_part * (2 * N - 2) * (2 * N - 1), 1);
-
-​			S_N += (sign_part * pow_part / fac_part);
-
-​			
-
-​			rel_chg = fabs((S_N - S_N_prev) / S_N_prev);
-
-​			
-
-​		} while (N < N_max && rel_chg >= epsilon);
+​	   S_N = S_N + power(-1, k) * power(_x, 2 * k + 1) / factorial(2 * k + 1);
 
 ​	return S_N;
-
-​	}	
 
 }
