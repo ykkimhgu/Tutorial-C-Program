@@ -37,9 +37,7 @@ $$
 double factorial(int x);
 ```
 
-
-
-### Hint
+#### Hint
 
 
 
@@ -87,7 +85,7 @@ You must complete  the following tutorials first.
 
    ​
 
-3. Copy the source code below or from this link: [Assignment_powerNfactorial.cpp](https://github.com/ykkimhgu/Tutorial-C-Program/tree/main/sineTaylor)
+3. Copy the source code below or from this link: [Assignment_powerNfactorial_student.cpp](https://github.com/ykkimhgu/Tutorial-C-Program/blob/main/powerNfactorial/Assignment_powerNfactorial_student.cpp)
 
    ​
 
@@ -113,6 +111,8 @@ You must complete  the following tutorials first.
 (1) Report:  “**Assignment_powerNfactorial_yourName.pdf”**
 
 * A report that shows the results by capturing the output screen
+
+* [Download a simple report template](https://github.com/ykkimhgu/Tutorial-C-Program/blob/main/powerNfactorial/NP_Assignment_Factorial_YourName_2023.docx)
 
   ​
 
