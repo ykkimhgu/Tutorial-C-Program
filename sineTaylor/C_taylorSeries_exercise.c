@@ -16,17 +16,17 @@ Description      : C_taylorSeries_exercise.c
 
 
 double factorial(int _x);
+double power(double _x, int N);
+
 double sinTaylor(double _x);
 double sindTaylor(double _x);
 
-double power(double _x, int N);
-double sinTaylor2(double _x);
 
 int main(int argc, char* argv[])
 {
 
-	double x = PI / 3;
-	//double x = 60;
+	double x = PI / 6;
+	//double x = 30; // [deg]
 
 	double S_N = 0;
 
@@ -87,8 +87,4 @@ double sindTaylor(double _x)
 
 
 
-//  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
-double sinTaylor2(double _x)
-{
-	// [TODO] add your algorithm here
-}
+
