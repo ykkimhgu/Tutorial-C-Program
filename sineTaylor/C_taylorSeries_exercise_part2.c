@@ -14,7 +14,7 @@ Description      : C_taylorSeries_part2.c
 #include <math.h>
 //#define		PI		3.14159265358979323846264338327950288419716939937510582
 
-#include "../../../include/myNP_tutorial.h"
+#include "../../include/myNP_tutorial.h"
 
 int main(int argc, char* argv[])
 {
