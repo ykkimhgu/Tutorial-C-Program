@@ -70,7 +70,7 @@ double sinTaylor(double _x)
 	int N_max = 10;
 	double S_N = 0;			
 
-	for (int k = 0; k < N_max; k++)
+	//for (int k = 0; k < N_max; k++)
 		// [TODO] add your algorithm here
 	
 	return S_N;
