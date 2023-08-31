@@ -51,17 +51,15 @@ int main(int argc, char* argv[])
 // factorial function
 double factorial(int N)
 {
-	int y = 1;
-	for (int k = 2; k <= N; k++)
-		y = y * k;
-
-	return y;
+	// [TODO] add your algorithm here
+	return 0;
 }
 
 // power function
 double power(double _x, int N)
 {
 	// [TODO] add your algorithm here
+	return 0;
 }
 
 
@@ -83,6 +81,7 @@ double sinTaylor(double _x)
 double sindTaylor(double _x)
 {
 	// [TODO] add your algorithm here
+	return 0;
 }
 
 
