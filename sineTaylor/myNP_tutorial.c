@@ -12,18 +12,39 @@ Description      : myNP_tutorial.c
 #include "myNP_tutorial.h"
 
 
+
 // factorial function
 double factorial(int N)
 {
-	int y = 1;
-	for (int k = 2; k <= N; k++)
-		y = y * k;
-
-	return y;
+	// [TODO] add your algorithm here
+	return 0;
 }
+
+// power function
+double power(double _x, int N)
+{
+	// [TODO] add your algorithm here
+	return 0;
+}
+
+
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 double sinTaylor(double _x)
+{	
+	int N_max = 10;
+	double S_N = 0;			
+
+	//for (int k = 0; k < N_max; k++)
+		// [TODO] add your algorithm here
+	
+	return S_N;
+}
+
+
+// Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
+double sindTaylor(double _x)
 {
 	// [TODO] add your algorithm here
+	return 0;
 }
