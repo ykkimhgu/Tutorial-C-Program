@@ -58,6 +58,13 @@ double factorial(int N)
 	return y;
 }
 
+// power function
+double power(double _x, int N)
+{
+	// [TODO] add your algorithm here
+}
+
+
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 double sinTaylor(double _x)
@@ -78,11 +85,7 @@ double sindTaylor(double _x)
 	// [TODO] add your algorithm here
 }
 
-// power fuction
-double power(double _x, int N)
-{
-	// [TODO] add your algorithm here
-}
+
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 double sinTaylor2(double _x)
