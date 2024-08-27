@@ -7,6 +7,7 @@ Language/ver     : C in MSVS2022
 Description      : C_structure_exercise2_solution.c
 -------------------------------------------------------------------------------*/
 
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
