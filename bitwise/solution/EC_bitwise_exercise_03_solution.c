@@ -4,27 +4,51 @@
 void dec2bin(unsigned int n);
 
 void main() {
+    
+    uint8_t vals=0;
+    
+    // Assume 8 LEDs are connected to Digital Out pins of Port A (PA)
+    // LED0 at PA[0] to LED7 at PA[7]
 	uint8_t PA;
-
-	//Exercise_1: Turning ON LEDs of Port A(PA)
-	//Read PA6, 6th from LSB
-	PA = 15;			// b00001111; LED0 is LSB, Set to turn on LED
-	uint8_t bits = PA & (1 << 6);	// check bit of a6
-	printf("ex1: %d\n", bits);
 	
-	// Exercise_2: Turning ON LEDs of Port A(PA)
-	// assume 8 LEDs are connected to Digital Out pins of PA
-	PA = 15;   		// b00001111; LED0 is LSB, Set to turn on LED
-	PA |= (1 << 4); 	// turn ON LED4 
-	PA |= (3 << 4); 	// turn ON LED4 and LED5
-	printf("ex2: ");
+	// Initial Values of PA
+	PA = 0b00001111;			
+	printf("\n Initial PA: ");
+	dec2bin(PA);
+	
+	
+	// Exercise_1-1: Turning ON LED4 at PA[4] 
+	PA |= (1 << 4); 	    // turn ON LED4 
+	printf("\n ex1-1: ");
 	dec2bin(PA);
 
-	// Exercise_3: Turning off LEDs of Port A(PA)
-	PA = 15;		// b00001111; LED0 is LSB, Set to turn on LED
-	PA &= ~(1 << 2);    	// turn off LED2 
-	printf("\nex3: ");
+	//Exercise_1-2:  Read the bit at PA[4], 4th from LSB
+	vals = (PA>4) & (1);	// read bit of PA[4]
+	printf("\n ex1-2: %d\n", vals);
+
+
+	// Exercise_2-1: Turn off LED4 at PA[4]
+	PA &= ~(1 << 4);    	// turn off LED4  
+	printf("\n ex2-1: ");
 	dec2bin(PA);
+	
+	//Exercise_2-2:  Read the bit at PA[4], 4th from LSB
+	vals = (PA>4) & (1);	// read bit of PA[4]
+	printf("\n ex2-2: %d\n", vals);
+
+
+
+	// Exercise_3-1: Turning ON LED5 and LED4,  at PA[5:4] 
+    	PA |= (3 << 4); 	// turn ON LED5 and LED4
+	printf("\n ex3-1: ");
+	dec2bin(PA);
+    
+    	//Exercise_3-2:  Read bits LED5 and LED4,  at PA[5:4] 
+	vals = (PA>4) & (3);	// read bits at PA[5:4] 
+	printf("\n ex3-2: %d\n", vals);
+	
+	
+    
 }
 
 void dec2bin(unsigned int n) {
