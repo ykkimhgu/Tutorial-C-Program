@@ -17,9 +17,16 @@ Description      : myNP_tutorial.h
 #include <stdlib.h>
 #include <math.h>
 
+// factorial function
 extern double factorial(double _x);
+
+// power function
+extern double power(double _x, int N);
 
 //  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
 extern double sinTaylor(double _x);
+
+// Taylor series approximation for sin(x)  (input unit: [deg])
+extern double sindTaylor(double _x);
 
 #endif
