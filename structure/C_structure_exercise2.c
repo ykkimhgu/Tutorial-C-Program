@@ -64,7 +64,7 @@ int main()
 
 	
 	// Print address of   room1  and value of room1Pt and compare. 
-	printf("\n room3 address=%x ,  roomPt = %x  \n", &room1, room1Pt);
+	printf("\n room1 address=%x ,  roomPt = %x  \n", &room1, room1Pt);
 		
 
 }
