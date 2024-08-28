@@ -29,7 +29,7 @@ double power(double _x, int N)
 
 
 
-//  Taylor series approximation for sin(x) using pre-defined functions (input unit: [rad])
+//  Taylor series approximation for sin(x) (input unit: [rad])
 double sinTaylor(double _x)
 {	
 	int N_max = 10;
@@ -42,7 +42,7 @@ double sinTaylor(double _x)
 }
 
 
-// Taylor series approximation for sin(x) using pre-defined functions (input unit: [deg])
+// Taylor series approximation for sin(x)  (input unit: [deg])
 double sindTaylor(double _x)
 {
 	// [TODO] add your algorithm here
