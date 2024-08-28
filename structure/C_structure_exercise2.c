@@ -11,6 +11,8 @@ Description      : C_structure_exercise2.c
 #include <stdlib.h>
 #include <string.h>
 
+#define _CRT_SECURE_NO_WARNINGS
+
 typedef struct {
 	char building_name[100];
 	int room_number;
