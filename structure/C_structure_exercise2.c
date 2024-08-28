@@ -22,12 +22,13 @@ int main()
 {
     // Create structure type (Handong)  variable  room1
     Handong room1;
+    
     // Create structure type (Handong)  variable  room2, room3
     // Your code goes here
-	// Your code goes here
+	
 
     // Create structure type (Handong)  Pointer , roomPt
-    Handong *roomPt= malloc(sizeof(Handong));
+    Handong *room1Pt = &room1;
     
     // Assign room3 address to roomPt
     // Your code goes here
@@ -36,7 +37,7 @@ int main()
     // Define structure variable  memeber values: room1
 	strcpy(room1.building_name, "Newton");
 	room1.room_number = 109;
-	strcpy(room1.room_name, "SSSLAB");
+	strcpy(room1.room_name, "iiLAB");
 
     // Define structure variable  memeber values: room2
 	// Your code goes here
@@ -56,14 +57,12 @@ int main()
 	// Your code goes here
 	// Your code goes here
 
-	// Print each member values by  pointer variable: roomPt
+	// Print each member values by  pointer variable: room1Pt
 	// Your code goes here
 
 	
-	// Print address of   room3  and value of roomPt and compare. 
-	printf("\n room3 address=%x ,  roomPt = %x  \n", &room3, roomPt);
-	
-	// Free mallocated variable 
-	//free(roomPt);
+	// Print address of   room1  and value of room1Pt and compare. 
+	printf("\n room3 address=%x ,  roomPt = %x  \n", &room1, room1Pt);
+		
 
 }
