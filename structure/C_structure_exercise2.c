@@ -6,12 +6,11 @@ Modified         : 19-08-2022
 Language/ver     : C in MSVS2022
 Description      : C_structure_exercise2.c
 -------------------------------------------------------------------------------*/
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define _CRT_SECURE_NO_WARNINGS
 
 typedef struct {
 	char building_name[100];
