@@ -19,8 +19,8 @@ typedef struct {
 } POSITION_TypeDef;
 
 //
-void addPos(POSITION_TypeDef pos1, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
-void subDist(POSITION_TypeDef pos1, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
+void addPos(POSITION_TypeDef pos0, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
+void subDist(POSITION_TypeDef pos0, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
 void printPos(POSITION_TypeDef Pos);
 
 void main()
