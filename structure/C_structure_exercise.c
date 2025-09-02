@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------\
 @ C-Tutorial by Young-Keun Kim - Handong Global University
-Author           : ÄÚµù µµÀå
+Author           : ì½”ë”© ë„ì¥
 Created          : 19-08-2022
 Modified         : 19-08-2022
 Language/ver     : C in MSVS2022
@@ -12,28 +12,31 @@ Description      : C_structure_exercise.c
 #include <stdlib.h>
 #include <string.h>
 
-struct Student {
-    char name[20];
-    int grade;
-    int class;
-    float average;
-};
+typedef struct {
+  int grade;
+  int class;
+  float average;
+} Student;
 
-int main()
-{
-    struct Student* s1 = ¨ç___________________________;
+int main() {
+  Student student_1004;
 
-    ¨è_______________________________
-      ________________________________
-      ________________________________
-      ________________________________
+  student_1004.grade = 3;
+  // YOUR CODE GOES HERE
+  //_____________________
+  //_____________________
+  
+  printf("grade: %d\n", student_1004.grade);
+  printf("class: %d\n", student_1004.class);
+  printf("average: %f\n", student_1004.average);
 
-    printf("ÀÌ¸§: %s\n", s1->name);
-    printf("ÇĞ³â: %d\n", s1->grade);
-    printf("¹İ: %d\n", s1->class);
-    printf("Æò±ÕÁ¡¼ö: %f\n", s1->average);
+  printf("\n------In Pointer------\n\n");
+  
+  // YOUR CODE GOES HERE
+  //Student *s1 = _____________________
+  printf("grade: %d\n", s1->grade);
+  printf("class: %d\n", s1->class);
+  printf("average: %f\n", s1->average);
 
-    free(s1);
-
-    return 0;
+  return 0;
 }
