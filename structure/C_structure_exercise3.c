@@ -20,7 +20,7 @@ typedef struct {
 
 //
 void addPos(POSITION_TypeDef pos1, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
-void getDist(POSITION_TypeDef pos1, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
+void subDist(POSITION_TypeDef pos1, POSITION_TypeDef pos1, POSITION_TypeDef* posOut);
 void printPos(POSITION_TypeDef Pos);
 
 void main()
@@ -38,7 +38,7 @@ void main()
 	printPos(PosOut);
 
 	printf("Result output of 'getDist'\n");
-	getDist(Pos[0], Pos[1], &PosOut);
+	subDist(Pos[0], Pos[1], &PosOut);
 	printPos(PosOut);
 
 	system("pause");
